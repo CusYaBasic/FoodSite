@@ -1,7 +1,9 @@
 # Food Delivery Site
 
-I orginally created this out of bordem as I've always used HTML/PHP for small scale websites but nothing overly big. This is far from finished and only really has basic login avaliable, but it might be a good start for someone who wants to make a website.
-Admittingly alot of the PHP stuff could have been done better which is why I started a whole new project from the ground up.
+I orginally created this out of boredom as I've always used HTML/PHP for small scale websites but nothing overly big. I wanted to expand upon [Food App](https://github.com/CusYaBasic/FoodApp) as Food App was only ever a prototype made to show someone I previously worked with that I could build them an app. However with a change of job the app became abandoned due to lack of personal time. This is far from finished and only really has basic login avaliable, but it might be a good start for someone who wants to make a website.
+Admittingly alot of the PHP stuff could have been done better which is why I started a whole new project from the ground up. Not saying this isn't usable in anyway but lacks a little orginisation.
+
+---
 
 ## Features:
 * MySQL databases for storing user info
@@ -35,4 +37,42 @@ Admittingly alot of the PHP stuff could have been done better which is why I sta
 ![image](https://github.com/CusYaBasic/FoodSite/assets/86253238/d8c6a116-47e2-424a-bb71-81573db9b8ad)  
 
 ---
+
 Please excuse the layout and design of the pages, I'm not very strong when it comes to frontend or any type of artist design. But should be more than enough for someone to use as a base and build off from
+
+---
+
+### Config.php:
+You'll need to change a few things in config.php like database details and mail servers etc.
+
+---
+
+### MySQL:
+
+```
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `image` blob DEFAULT NULL,
+  `date` date NOT NULL,
+  `time_posted` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `last_login` timestamp NULL DEFAULT NULL,
+  `role` enum('user','admin') DEFAULT 'user',
+  `status` enum('active','inactive','suspended','deleted') DEFAULT 'active',
+  `verification_status` enum('pending','verified') DEFAULT 'pending',
+  `verification_token` varchar(255) DEFAULT NULL,
+  `reset_token` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+```
