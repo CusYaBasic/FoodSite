@@ -13,6 +13,7 @@ Admittingly alot of the PHP stuff could have been done better which is why I sta
 * JWT for security
 * Sessions and cookies
 * Basic index page with header and sidebar
+* News tab with news page which grabs news from the MySQL database
 
 ## Media:
 ### Login:
@@ -29,3 +30,9 @@ Admittingly alot of the PHP stuff could have been done better which is why I sta
 
 ### Dashboard:
 ![image](https://github.com/CusYaBasic/FoodSite/assets/86253238/35514e9c-c9ff-44c9-b056-465a4f270bab)  
+
+### News Tab:
+![image](https://github.com/CusYaBasic/FoodSite/assets/86253238/d8c6a116-47e2-424a-bb71-81573db9b8ad)  
+
+---
+Please excuse the layout and design of the pages, I'm not very strong when it comes to frontend or any type of artist design. But should be more than enough for someone to use as a base and build off from
