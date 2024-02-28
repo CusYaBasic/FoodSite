@@ -76,3 +76,8 @@ CREATE TABLE `users` (
   `reset_token` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 ```
+
+---
+
+### Buy me a coffee:  
+If you use any part of this and want to thank me you can buy me a coffee at [this link](https://www.paypal.me/CusYaBasic)
